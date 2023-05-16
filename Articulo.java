@@ -1,13 +1,13 @@
 public class Articulo {
 
-    // Atributos
+    //////////////// Atributos/////////////////
 
     final String nombre;
     double precio;
     final double iva;
     int cantidad;
 
-    // Setters y Getters
+    ///////////// Setters y Getters/////////////
 
     public String getNombre() {
         return nombre;
@@ -33,7 +33,7 @@ public class Articulo {
         this.cantidad = cantidad;
     }
 
-    // Constructor
+    /////////////// Constructor//////////////
 
     public Articulo(String nombre, double precio, double iva, int cantidad) {
         this.nombre = nombre;
@@ -42,8 +42,25 @@ public class Articulo {
         this.cantidad = cantidad;
     }
 
+    //////////////// Metodos////////////////
 
-    // Metodos
+    public String toString() {
+        return "Nombre: " + this.nombre + "\n" + "Precio: " + this.precio + " \n" + "IVA: " + this.iva + " \n"
+                + "Cantidad: " + this.cantidad;
+    }
 
+    public void aumentarCantidad(int cant) {
+
+        int cap = getCantidad() + cant;
+        setCantidad(cap);
+
+    }
+
+    public void disminuirCantidad(int cant) {
+
+        int cap = getCantidad() - cant;
+        setCantidad(cap);
+
+    }
 
 }
